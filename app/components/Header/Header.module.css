@@ -1,0 +1,17 @@
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid white;
+    padding: 8px;
+}
+
+.mainTitle{
+    font-size: 24px;
+}
+.time{
+    font-size: 18px;
+}
