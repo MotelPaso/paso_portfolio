@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Window from "./components/MainWindow/Window";
 import Header from "./components/Header/Header";
 
