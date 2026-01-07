@@ -15,11 +15,13 @@
 }
 [data-theme="Catpucchin-Mocha"] {
 	--background: #212130;
-	--text: #c9d2ef;
+	--text: #cdd6f4;
+	--border: #89dceb;
 }
 [data-theme="Kimble-Dark"] {
 	--background: #241d12;
 	--text: #cfac84;
+	--border: #ad7828;
 }
 [data-theme="Kanagawa"] {
 	--background: #212129;
