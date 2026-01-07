@@ -1,11 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Header.module.css'
+import AngleDown from "./angle-down.png"
 import StyleButton from '../StyleButton/StyleButton';
-import DropMenu from '../DropMenu/DropMenu'
 
-export default function Header() {
+interface HeaderProps {
+    showDropMenu: React.Dispatch<React.SetStateAction<boolean>>;
+    showMenu: boolean;
+    showThemeMenu: React.Dispatch<React.SetStateAction<boolean>>;
+    showTheme: boolean;
+}
+
+
+export default function Header({ showDropMenu, showMenu, showThemeMenu, showTheme }: HeaderProps) {
     const date: Date = new Date();
 
     const [time, setTime] = useState("");
@@ -27,13 +35,15 @@ export default function Header() {
 
     return (<div className={styles.header}>
         <div className='flex align-center'>
-            <DropMenu />
+            <button className="pl-1" onClick={(): void => showDropMenu(!showMenu)}>
+                <img src={AngleDown.src} />
+            </button>
         </div>
         <div>
             <p className={styles.time}>{time}</p>
         </div>
         <div className="flex flex-row justify-center">
-            <StyleButton />
+            <StyleButton showThemeMenu={showThemeMenu} showTheme={showTheme} />
         </div>
     </div>)
 }
